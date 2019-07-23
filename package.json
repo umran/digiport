@@ -1,0 +1,34 @@
+{
+  "name": "digiport",
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib.js",
+  "scripts": {
+    "test": "mocha",
+    "cover": "istanbul cover _mocha",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umran/digiport.git"
+  },
+  "author": "Ahmed Umran Hussain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/umran/digiport/issues"
+  },
+  "homepage": "https://github.com/umran/digiport#readme",
+  "dependencies": {
+    "graphql": "^14.3.0",
+    "graphql-iso-date": "^3.6.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.2",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "istanbul": "^1.1.0-alpha.1",
+    "mocha": "^5.2.0",
+    "mocha-lcov-reporter": "^1.3.0"
+  }
+}
