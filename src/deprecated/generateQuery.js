@@ -5,7 +5,7 @@ const generateQuery = (schemas, resolver) => {
   const { outputTypes, predicateTypes, orderByTypes, connectionTypes } = generateTypeRegistry(schemas)
 
   return new GraphQLObjectType({
-    name: "_query",
+    name: "query",
     fields: () => schemas.reduce((fieldMap, schema) => {
       fieldMap[schema.name] = {
         type: connectionTypes[schema.name],

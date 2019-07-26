@@ -166,9 +166,7 @@ const schemas = [
 ]
 
 // declare a placeholder resolver
-const resolver = async ({ root, args, context, collection }) => {
-  console.log(args)
-
+const resolver = async ({ source, args, context, info, collection }) => {
   return {
     page_info: null,
     edges: []
@@ -176,7 +174,7 @@ const resolver = async ({ root, args, context, collection }) => {
 }
 
 const gqlSchema = generateSchema(schemas, resolver)
-console.log(printSchema(gqlSchema))
+// console.log(printSchema(gqlSchema))
 
 const app = express()
 app.use('/', graphqlHTTP({
